@@ -11,7 +11,7 @@
 // s*****s
 // *******
 
-function tree() {
+function tree(height, leaf) {
 
 }
 
@@ -21,12 +21,12 @@ function tree() {
 
 }
 
-for (var i = 0; i < height-input.length; i++) {
-	for (var j = 0; j < Things.length; j++) {
-		Things[j]
-	}
-}
+for (var i = 0; i < height; i++) {
+  var spaceNeeded = height - 1;
 
+  console.log(leaf);
+  console.log(spaceNeeded + variable);
+}
 document.getElementById("myBtn").addEventListener("click", displayDate);  //an example
 
 // add += 2 maybe
