@@ -11,23 +11,39 @@
 // s*****s
 // *******
 
-function tree(height, leaf) {
+// function tree(height, leaf) {
+//
+// }
+//
+// {
+// 	height: height-input,
+// 	leaf: character-input,
+//
+// }
+//
+// for (var i = 0; i < height; i++) {
+//   var spaceNeeded = height - 1;
+//
+//   console.log(leaf);
+//   console.log(spaceNeeded + variable);
+// }
+// document.getElementById("myBtn").addEventListener("click", displayDate);  //an example
+//
+// // add += 2 maybe
+// alert("Both fields must have a value");
 
-}
+var myChar = "*";
+var myHeight = 4;
 
-{
-	height: height-input,
-	leaf: character-input,
-
-}
-
-for (var i = 0; i < height; i++) {
-  var spaceNeeded = height - 1;
-
-  console.log(leaf);
-  console.log(spaceNeeded + variable);
-}
-document.getElementById("myBtn").addEventListener("click", displayDate);  //an example
-
-// add += 2 maybe
-alert("Both fields must have a value");
+//I found this online which made sense at first.  It doesn't work!!
+// for (var i = 0; i < myHeight; i++) {
+// 	for (var j = i + 1; j < myHeight; j++) {
+// 		console.log(" ");
+// 	}
+// 	for (var j = 0; j <= 2*i; j++) {
+// 		console.log("*");
+// 	}
+// 	if (i<=myHeight-1) {
+// 	console.log("");
+// 	}
+// }
