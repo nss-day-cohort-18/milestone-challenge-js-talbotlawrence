@@ -1,9 +1,13 @@
-//tree function
-//build in console.log
-//the user can either then just press the enter key (as long as the cursor is in one of the input fields)
-//or click a button that is labeled "Grow your tree"
-//event listener to the button, as well as an event listener for the enter/return key.
-//display an alert stating that both fields must have a value.
+//It accepts a single object as an argument. The object should have two key/value pairs.
+//A key that specifies the height of the pine tree.
+// The value for the height of the tree should be from user input in a <input type="text"> field in the DOM.
+// A key that specifies which character to use to build the pine tree.
+// The character to use should be from user input in a <input type="text"> field in the DOM.
+//the user can either then just press the enter key (as long as the cursor is in one of the input fields), or click a button that is labeled "Grow your tree"
+//If either of the input fields does not have a value in it when the user presses the enter key, or presses the button, then display an alert stating that both fields must have a value.
+
+//I still need to build the object, the Enter Key function, and the validation.
+//I wanted it to work first!
 
 // sss*sss
 // ss***ss
@@ -11,22 +15,26 @@
 // *******
 
 // alert("Both fields must have a value");
-/////////////////////////////////////////////////////////////////////////////////////////////
-var myChar = document.getElementById("input");
-var myHeight = document.getElementById("rows");
-var submitButton = document.getElementById("submit");
-/////////////////////////////////////////////////////////////////////////////////////////////
 
 // var myChar = "*";
 // var myHeight = 8;
-// var mySpace = " ";
-var j = 0;	
 
-for (var i = 0; i < myHeight; i++) {
-	console.log(mySpace.repeat(myHeight-(i+1)) + myChar.repeat((i+1)+j));
-	j += 1;	
+/////////////////////////////////////////////////////////////////////////////////////////////
+var submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", function() {
+	var myHeight = document.getElementById("rows").value;
+	var myChar = document.getElementById("input").value;
+	buildTree(myHeight, myChar);
+});
+
+function buildTree(height, character) {
+	var mySpace = " ";
+	var j = 0;	
+	for (var i = 0; i < height; i++) {
+		console.log(mySpace.repeat(height-(i+1)) + character.repeat((i+1)+j));
+		j += 1;	
+	}
 };
-
 
 
 //3
