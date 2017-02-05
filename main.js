@@ -3,7 +3,6 @@
 //the user can either then just press the enter key (as long as the cursor is in one of the input fields)
 //or click a button that is labeled "Grow your tree"
 //event listener to the button, as well as an event listener for the enter/return key.
-//http://www.w3schools.com/js/js_htmldom_eventlistener.asp
 //display an alert stating that both fields must have a value.
 
 // sss*sss
@@ -11,39 +10,41 @@
 // s*****s
 // *******
 
-// function tree(height, leaf) {
-//
-// }
-//
-// {
-// 	height: height-input,
-// 	leaf: character-input,
-//
-// }
-//
-// for (var i = 0; i < height; i++) {
-//   var spaceNeeded = height - 1;
-//
-//   console.log(leaf);
-//   console.log(spaceNeeded + variable);
-// }
-// document.getElementById("myBtn").addEventListener("click", displayDate);  //an example
-//
-// // add += 2 maybe
 // alert("Both fields must have a value");
+/////////////////////////////////////////////////////////////////////////////////////////////
+var myChar = document.getElementById("input");
+var myHeight = document.getElementById("rows");
+var submitButton = document.getElementById("submit");
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-var myChar = "*";
-var myHeight = 4;
+// var myChar = "*";
+// var myHeight = 8;
+// var mySpace = " ";
+var j = 0;	
 
-//I found this online which made sense at first.  It doesn't work!!
-// for (var i = 0; i < myHeight; i++) {
-// 	for (var j = i + 1; j < myHeight; j++) {
-// 		console.log(" ");
-// 	}
-// 	for (var j = 0; j <= 2*i; j++) {
-// 		console.log("*");
-// 	}
-// 	if (i<=myHeight-1) {
-// 	console.log("");
-// 	}
-// }
+for (var i = 0; i < myHeight; i++) {
+	console.log(mySpace.repeat(myHeight-(i+1)) + myChar.repeat((i+1)+j));
+	j += 1;	
+};
+
+
+
+//3
+// console.log(mySpace + mySpace + myChar);					//3---myHeight--always one char on line 1-------mySpace.repeat(myHeight-1) + myChar.repeat(1);
+// console.log(mySpace + myChar + myChar + myChar);			//4---myHeight + i------------------------------mySpace.repeat(myHeight-2) + myChar.repeat(3);
+// console.log(myChar + myChar + myChar + myChar + myChar);	//5---myHeight + i------------------------------mySpace.repeat(myHeight-3) + myChar.repeat(5);
+
+//2
+// console.log(mySpace + myChar);								//2---myHeight
+// console.log(myChar + myChar + myChar);						//3---myHeight + i
+
+//mySpace.repeat(myHeight-1) + myChar.repeat(1);
+//mySpace.repeat(myHeight-2) + myChar.repeat(3);
+//mySpace.repeat(myHeight-3) + myChar.repeat(5);
+
+//mySpace.repeat(myHeight-(i+1)) + myChar.repeat((i+1)+j);
+//mySpace.repeat(myHeight-(i+1)) + myChar.repeat((i+1)+j);
+//mySpace.repeat(myHeight-(i+1)) + myChar.repeat((i+1)+j);
+
+//before the loop, j = 0;
+//after the first iteration, j += 1;
