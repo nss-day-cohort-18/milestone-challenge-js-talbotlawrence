@@ -1,30 +1,30 @@
-//It accepts a single object as an argument. The object should have two key/value pairs.
-//A key that specifies the height of the pine tree.
-// The value for the height of the tree should be from user input in a <input type="text"> field in the DOM.
-// A key that specifies which character to use to build the pine tree.
-// The character to use should be from user input in a <input type="text"> field in the DOM.
-//the user can either then just press the enter key (as long as the cursor is in one of the input fields), or click a button that is labeled "Grow your tree"
-//If either of the input fields does not have a value in it when the user presses the enter key, or presses the button, then display an alert stating that both fields must have a value.
-
-//I still need to build the object, the Enter Key function, and the validation.
-//I wanted it to work first!
+//I still need to build the object.
 
 // sss*sss
 // ss***ss
 // s*****s
 // *******
 
-// alert("Both fields must have a value");
-
-// var myChar = "*";
-// var myHeight = 8;
-
 /////////////////////////////////////////////////////////////////////////////////////////////
+// var myHeight = document.getElementById("rows").value;
+// var myChar = document.getElementById("input").value;
+
+treeObj = {
+	height: "",
+	character: "" 
+};
+
 var submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", function() {
 	var myHeight = document.getElementById("rows").value;
 	var myChar = document.getElementById("input").value;
-	buildTree(myHeight, myChar);
+	treeObj.height = myHeight;
+	treeObj.character = myChar;
+	if (treeObj.height && treeObj.character === "") {
+		alert("Please make sure you fill out the form")
+	} else {
+		buildTree(treeObj.height, treeObj.character);
+	}
 });
 
 function buildTree(height, character) {
@@ -35,6 +35,14 @@ function buildTree(height, character) {
 		j += 1;	
 	}
 };
+
+var myChar = document.getElementById("input");
+myChar.addEventListener("keyup", function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {
+		submitButton.click();
+	}
+});
 
 
 //3
